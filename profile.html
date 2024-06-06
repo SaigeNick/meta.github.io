@@ -8,52 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #343a40;
-        color: #fff;
-      }
-      .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #212529;
-        padding: 20px 0;
-        text-align: center;
-      }
-      .container-custom {
-        background: radial-gradient(
-            98.33% 98.33% at 50% 50%,
-            rgba(0, 56, 255, 0.2) 0%,
-            rgba(0, 56, 255, 0.2) 0.01%,
-            rgba(248, 230, 255, 0.034) 100%
-          ),
-          #ffffff;
-        border-radius: 10px;
-        color: #222;
-        justify-self: center;
-        max-width: 600px; /* Adjusted container width */
-        margin: 0 auto; /* Center container horizontally */
-        padding: 20px; /* Added padding */
-      }
-      .img-fluid-custom {
-        max-width: 100%;
-        height: auto;
-      }
-      .card-body {
-        color: #222;
-      }
-      .text-custom {
-        text-align: center; /* Center the text */
-      }
-      .user-profile p {
-        margin-bottom: 10px; /* Reduce margin between paragraphs */
-      }
-      .badge {
-        background-color: aliceblue;
-        color: #212529;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -101,7 +56,7 @@
             <a class="btn btn-primary" href="sign_up.html" role="button"
               >Sign Up</a
             >
-            <a href="#" class="btn btn-primary ms-2" role="button">
+            <a href="cart.html" class="btn btn-primary ms-2" role="button">
               <i class="bi bi-cart-fill"></i>
               <span class="badge bg">0</span>
             </a>
@@ -124,9 +79,8 @@
               </div>
               <div class="col-md-8 align-self-center">
                 <h5>User Profile</h5>
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>Email:</strong> john.doe@example.com</p>
-                <p><strong>Number:</strong> +380-96-***-***</p>
+                <p><strong>Name:</strong> <span class="name"></span></p>
+                <p><strong>Email:</strong> <span class="email"></span></p>
               </div>
             </div>
           </div>
@@ -149,5 +103,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="js/controllers/UserController.js"></script>
   </body>
 </html>
